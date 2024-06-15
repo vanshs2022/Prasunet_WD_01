@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:ital,wght@0,600;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+#companyName {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 9vh;
+    padding: 10px;
+    z-index: 9999;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#navbar li {
+    list-style-type: none;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Poppins', 'Dancing Script';
+    font-weight: normal;
+    position: relative;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+#navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: aliceblue;
+    transition: width 0.4s ease-in-out;
+}
+
+#navbar a:hover::after {
+    width: 100%;
+}
+
+#navbar a:hover {
+    color: aliceblue;
+}
+
+#navbar .no-underline::after {
+    content: none;
+}
+
+#logo {
+    height: 70px;
+}
+
+.drop {
+    width: 10vw;
+}
+
+.interns ul {
+    display: flex;
+    flex-direction: column;
+    max-width: 10vw;
+}
+
+.interns a {
+    font-size: 15px;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-colored {
+    background-color: #333;
+    /* Change this to the desired color */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+}
+
+.no-display {
+    display: none;
+}
+
+#front {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+    background-image: url('https://images.pexels.com/photos/421927/pexels-photo-421927.jpeg?cs=srgb&dl=pexels-chris-schippers-139261-421927.jpg&fm=jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sect {
+    width: 70vw;
+    background-color: black;
+    color: aliceblue;
+    min-height: 70vh;
+    margin: 6px;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+
+.title {
+    font-size: 80px;
+    z-index: 2;
+}
+
+#hamburger{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    #companyName {
+        width: 90vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #navbar ul.show {
+        display: flex;
+    }
+
+    #navbar li {
+        padding: 10px;
+        width: 100%;
+    }
+
+    #navbar a::after{
+        background-color: navy;
+    }
+
+    #navbar a:hover {
+        color: navy;
+    }
+
+    .drop {
+        width: 100%;
+    }
+
+    .interns ul {
+        width: 100%;
+    }
+
+    #hamburger {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .sect {
+        width: 90vw;
+    }
+
+    /* Show dropdown content on mobile */
+    .show-dropdown {
+        display: flex !important;
+    }
+
+    
+}
