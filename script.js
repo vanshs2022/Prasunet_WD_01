@@ -144,9 +144,15 @@ function updateLinks() {
     if (window.innerWidth < 768) {
         anchor1.href = '#internship';
         anchor2.href = '#services';
+        servicesLink.classList.remove("no-underline");
+        internshipLink.classList.remove("no-underline");
+        servicesDropdown.style.display = "none";
+        internshipDropdown.style.display = "none";
     } else {
         anchor1.href = '#';
         anchor2.href = '#';
+        servicesLink.classList.add("no-underline");
+        internshipLink.classList.add("no-underline");
     }
 }
 
